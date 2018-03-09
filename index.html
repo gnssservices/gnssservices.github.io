@@ -1,1 +1,573 @@
-Hello World
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>GNSS Services</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="GNSS Services" />
+	<meta name="keywords" content="GNSS,GPS,LBS,GLONASS,BDS,GALILEO,RTK" />
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/flag-icon.css">
+
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+
+	<style>
+	/* For demo purpose only */
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: block;
+		margin-bottom: 5px!important;
+		float: left;
+		width: 100%;
+	}
+	#colour-variations li a {
+		width: 100%;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+	}
+	#colour-variations li a:hover {
+	  	opacity: .9;
+	}
+	#colour-variations li a > span {
+		width: 33.33%;
+		height: 20px;
+		float: left;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		         <a class="navbar-brand" href="index.html">GNSS Services</a> 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#" data-nav-section="work"><span>Work</span></a></li>
+		            <li><a href="#" data-nav-section="testsuites"><span>Test Suites</span></a></li>
+		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+		            <li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image.png);" data-stellar-background-ratio="0.5">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1 class="to-animate">Do something you love.</h1>
+							<h2 class="to-animate">GNSS Services is an enabling technology provider with global reach offering solutions for multi-disciplinary applications. With a wide range of convenient services to improve positioning accuracy, we have the correction services solution to meet your needs.</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slant"></div>
+	</section>
+
+	<section id="fh5co-intro">
+		<div class="container">
+			<div class="row row-bottom-padded-lg">
+				<div class="fh5co-block to-animate" style="background-image: url(images/GPS_logo.png);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<div class="img-flags flag flag-icon-background flag-icon-us"></div>
+						<h2>GPS</h2>
+						<p>The Global Positioning System (GPS), is a space-based radionavigation system owned by the United States government and operated by the United States Air Force. It is a global navigation satellite system that provides geolocation and time information to a GPS receiver anywhere on or near the Earth.</p>
+						<p><a href="https://www.gps.gov/" class="btn btn-primary">Read More</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/Glonass_logo.png);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<div class="img-flags flag flag-icon-background flag-icon-ru"></div>
+						<h2>GLONASS</h2>
+						<p>GLONASS (Russian: ГЛОНАСС, IPA: [ɡɫɐˈnas]; Глобальная навигационная спутниковая система; transliteration Globalnaya navigatsionnaya sputnikovaya sistema), or "Global Navigation Satellite System", is a space-based satellite navigation system operating in the radionavigation-satellite service.</p>
+						<p><a href="https://www.glonass-iac.ru/en/" class="btn btn-primary">Read More</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/Beidou_logo.png);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<div class="img-flags flag flag-icon-background flag-icon-cn"></div>
+						<h2>BeiDou</h2>
+						<p>The BeiDou Navigation Satellite System (BDS, simplified Chinese: 北斗卫星导航系统;) is a Chinese satellite navigation system. It consists of two separate satellite constellations – a limited test system that has been operating since 2000, and a full-scale global navigation system that is currently under construction.</p>
+						<p><a href="http://www.beidou.gov.cn/" class="btn btn-primary">Read More</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/Galileo_logo.svg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<div class="img-flags flag flag-icon-background flag-icon-eu"></div>
+						<h2>GALILEO</h2>
+						<p>Galileo is the global navigation satellite system (GNSS) that is currently being created by the European Union (EU) through the European Space Agency (ESA),[3] headquartered in Prague in the Czech Republic, with two ground operations centres, Oberpfaffenhofen near Munich in Germany and Fucino in Italy. </p>
+						<p><a href="https://www.gsa.europa.eu/" class="btn btn-primary">Read More</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/QZSS_logo.gif);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<div class="img-flags flag flag-icon-background flag-icon-jp"></div>
+						<h2>QZSS</h2>
+						<p>QZSS is a Japanese satellite positioning system composed mainly of satellites in quasi-zenith orbits (QZO). The term "Quasi-Zenith Satellite (QZS)" can refer to both satellites in QZO and geostationary orbits (GEO). For that reason, "QZO satellite" is used when it is necessary to specifically refer to satellites in QZO.</p>
+						<p><a href="http://qzss.go.jp/en/" class="btn btn-primary">Read More</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/IRNSS_logo.png);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<div class="img-flags flag flag-icon-background flag-icon-in"></div>
+						<h2>IRNSS</h2>
+						<p>The Indian Regional Navigation Satellite System (IRNSS) with an operational name of NAVIC ("sailor" or "navigator" in Sanskrit, Hindi, which also stands for NAVigation with Indian Constellation) is an autonomous regional satellite navigation system, provides accurate real-time positioning and timing services. </p>
+						<p><a href="https://www.isro.gov.in/irnss-programme" class="btn btn-primary">Read More</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-work" data-section="work">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Work</h2>
+
+				</div>
+			</div>
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-4 col-xxs-12">
+					<a href="images/Agriculture.png" class="fh5co-project-item image-popup to-animate">
+						<img src="images/Agriculture.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Agriculture</h2>
+						<span>Positioning &amp; Navigation</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-xxs-12">
+					<a href="images/Navigation.png" class="fh5co-project-item image-popup to-animate">
+						<img src="images/Navigation.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Navigation</h2>
+						<span>Positioning &amp; Navigation</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 col-xxs-12">
+					<a href="images/Geofence.png" class="fh5co-project-item image-popup to-animate">
+						<img src="images/Geofence.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Geofence</h2>
+						<span>Positioning &amp; Navigation</span>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-4 col-xxs-12">
+					<a href="images/AGNSS.png" class="fh5co-project-item image-popup to-animate">
+						<img src="images/AGNSS.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Assisted GNSS</h2>
+						<span>Data services</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 col-xxs-12">
+					<a href="images/Correction.png" class="fh5co-project-item image-popup to-animate">
+						<img src="images/Correction.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Correction Services</h2>
+						<span>Data services</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 col-xxs-12">
+					<a href="images/Indoor.png" class="fh5co-project-item image-popup to-animate">
+						<img src="images/Indoor.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Indoor positioning</h2>
+						<span>Data services</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-testimonials" data-section="testsuites">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Test Suites</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>For any new GPS/GNSS-enabled device, thorough testing is essential – but the tests you run, and the standards you apply, will depend on what it is you're developing, the ways it's likely to be used, and the levels of Performance your users expect.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>&ldquo;Choose and customise pre-created test suites to test your device’s key GNSS capabilities…and execute them with a single click.&rdquo;</p>
+						</blockquote>
+						<div class="author to-animate">
+							<figure><img src="images/Test.png" alt="Test"></figure>
+							<p>
+							Test Applications <span class="subtext">Android,RTK,PPP</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>&ldquo;Take hard work out of analyzing your results, as test bench carries out the statistical interpretation of results for you. &rdquo;</p>
+						</blockquote>
+						<div class="author to-animate">
+							<figure><img src="images/ai.png" alt="Log Analyzer"></figure>
+							<p>
+							Log Analyzer<span class="subtext">AI,BigData</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>&ldquo; Produce a beautiful test report with detailed test data. It even makes a perfect slide. Built-in multiple templates. &rdquo;</p>
+						</blockquote>
+						<div class="author to-animate">
+							<figure><img src="images/Report.png" alt="Report"></figure>
+							<p>
+							Report Builder<span class="subtext">PDF,Slides</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
+
+
+	<section id="fh5co-services" data-section="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-left">
+					<h2 class=" left-border to-animate">Services</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-map-o"></i>
+					<h3>Location Based Services</h3>
+					<p>Global reach to more than 110 million cell tower IDs. Monitor all devices even while roaming. Locate more than 1.5 billion Wi-Fi access points globally. Know which access points devices are connected to for constant location tracking of assets.</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-server"></i>
+					<h3>Data Services</h3>
+					<p>RTK corrections including both GPS and GLONASS are provided from a central server which automatically selects and then sends the corrections from the nearest base station to your rover via a cell phone modem. </p>
+				</div>
+
+				<div class="clearfix visible-sm-block"></div>
+
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-stack"></i>
+					<h3>Test Suites</h3>
+					<p>The tests you conduct depend on the device you’re testing and the performance standards you need it to meet. Our wide selection of pre-prepared scenarios, test packs and test suites will get you started fast.</p>
+				</div>
+
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-target"></i>
+					<h3>RTK Solution</h3>
+					<p>RTK positioning is a satellite navigation technique used to enhance the precision of position data derived from satellite-based positioning systems (global navigation satellite systems, GNSS) such as GPS, GLONASS, Galileo, and BeiDou. </p>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<section id="fh5co-contact" data-section="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Get In Touch</h2>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-6 to-animate">
+					<h3>Contact Info</h3>
+					<ul class="fh5co-contact-info">
+						<li class="fh5co-contact-address ">
+							<i class="icon-home"></i>
+							No. 16 Xinjinqiao Road, Pudong New District<br>Shanghai, China
+						</li>
+						<li><i class="icon-phone"></i> +86(21)6199-2181</li>
+						<li><i class="icon-envelope"></i>support@gnss.services</li>
+						<li><i class="icon-globe"></i> <a href="http://gnss.services/" target="_blank">gnss.services</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-6 to-animate">
+					<h3>Contact Form</h3>
+					<form> 
+					<div class="form-group ">
+						<label for="name" class="sr-only">Name</label>
+						<input id="ContactName" class="form-control" placeholder="Name" type="text">
+					</div>
+					<div class="form-group ">
+						<label for="email" class="sr-only">Email</label>
+						<input id="ContactEmail" class="form-control" placeholder="Email" type="email">
+					</div>
+					<div class="form-group ">
+						<label for="message" class="sr-only">Message</label>
+						<textarea name="" id="ContactMessage" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+					</div>
+					<div class="form-group ">
+						<input class="btn btn-primary btn-lg" value="Send Message" type="submit" onclick="getcube()">
+					</div>
+					</div>
+					<!-- https://docs.google.com/forms/d/e/1FAIpQLSfpiXQcIH62DeE51oemTGR58U92ajGnvi2d6ciOHKnFzG_yFA/formResponse?entry.843565785=aa@aa.com&entry.1572981616=wayne&entry.1932452283=test1234!@ -->
+					</form>  
+				</div>
+
+			</div>
+		</div>
+	</section>
+	
+	
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>&copy; GNSS Services. All Rights Reserved.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-youtube"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	<script type="text/javascript">  
+	function getcube(){  
+		var name=document.getElementById("ContactName").value; 
+		var email=document.getElementById("ContactEmail").value; 
+		var message=document.getElementById("ContactMessage").value;  
+		var url="https://docs.google.com/forms/d/e/1FAIpQLSfpiXQcIH62DeE51oemTGR58U92ajGnvi2d6ciOHKnFzG_yFA/formResponse?entry.843565785="+email+"&entry.1572981616="+name+"&entry.1932452283="+message;
+		alert(url);  
+		open(url);  
+	}  
+	</script> 
+
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Counter -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
